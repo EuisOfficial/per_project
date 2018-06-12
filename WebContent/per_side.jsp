@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.net.*" %>
+<%@ page import="java.io.*" %>
 <%
 	request.setCharacterEncoding("UTF-8");
 	String link = request.getParameter("link");
@@ -9,6 +11,22 @@
 	String[] content = request.getParameter("content").split("\n");
 	String time = request.getParameter("date");
 %>
+<%-- <%
+	URL url = new URL("http://localhost:8080/per_project/per_side.jsp");
+	URLConnection urlConn = url.openConnection();
+	File html = new File("c:/temp/test.html");
+	BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
+ 	/* BufferedWriter out = new BufferedWriter(new FileWriter(html)); */
+ 	BufferedWriter outl = new BufferedWriter(new FileWriter(html));
+	String str;
+	StringBuffer sb = new StringBuffer();
+	while ((str = in.readLine()) != null) {
+	sb.append(str);
+	}
+	outl.write(sb.toString());
+	in.close();
+	outl.close();
+%> --%>
 <!DOCTYPE html>
 <html>
 
